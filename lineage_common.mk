@@ -40,3 +40,5 @@ PRODUCT_PACKAGES += \
 
 # Touch
 include hardware/google/pixel/touch/device.mk
+
+DERPFEST_BUILD_TYPE := Official
