@@ -1028,3 +1028,6 @@ $(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
 
 # Pixel Cam
 $(call inherit-product, vendor/google/camera/config.mk)
+
+PRODUCT_PACKAGES += \
+	Etar
