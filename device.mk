@@ -628,7 +628,6 @@ include hardware/google/pixel/HardwareInfo/HardwareInfo.mk
 PRODUCT_PRODUCT_PROPERTIES += \
 	dumpstate.strict_run=false
 
-<<<<<<< HEAD
 # AiAi Config
 PRODUCT_COPY_FILES += \
     device/google/gs201/allowlist_com.google.android.as.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/allowlist_com.google.android.as.xml
@@ -682,3 +681,5 @@ $(call inherit-product, vendor/google/camera/config.mk)
 
 PRODUCT_PACKAGES += \
 	Etar
+
+DISABLE_ARTIFACT_PATH_REQUIREMENTS := true
