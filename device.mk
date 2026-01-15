@@ -672,3 +672,5 @@ DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += \
     device/google/gs201/vintf/device_framework_matrix_product.xml
 
 DISABLE_ARTIFACT_PATH_REQUIREMENTS := true
+
+DERPFEST_BUILD_TYPE := Official
