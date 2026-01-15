@@ -670,3 +670,5 @@ DEVICE_MATRIX_FILE += \
     device/google/gs201/vintf/compatibility_matrix.xml
 DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += \
     device/google/gs201/vintf/device_framework_matrix_product.xml
+
+DISABLE_ARTIFACT_PATH_REQUIREMENTS := true
