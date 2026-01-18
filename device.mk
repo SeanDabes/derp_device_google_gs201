@@ -674,3 +674,6 @@ DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += \
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST := %
 
 DERPFEST_BUILD_TYPE := Official
+
+# Viper4Android
+$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
