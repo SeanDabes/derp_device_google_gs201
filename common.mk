@@ -481,3 +481,9 @@ DERPFEST_BUILD_TYPE := Official
 
 # Viper4Android
 $(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
+
+PRODUCT_PACKAGES += \
+    Etar \
+    ExactCalculator \
+    Seedvault \
+    BackupRestoreConfirmation
