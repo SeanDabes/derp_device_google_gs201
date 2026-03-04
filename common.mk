@@ -497,4 +497,5 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     Seedvault \
     BackupRestoreConfirmation \
-    Jelly
+    Jelly \
+    webview
