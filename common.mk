@@ -499,3 +499,14 @@ PRODUCT_PACKAGES += \
     BackupRestoreConfirmation \
     Jelly \
     webview
+
+# WiFi calling
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.dbg.ims_vt_enable=1 \
+    persist.dbg.ims_volte_enable=1 \
+    persist.dbg.volte_avail_ovr=1 \
+    persist.dbg.vt_avail_ovr=1 \
+    persist.dbg.wfc_avail_ovr=1 \
+    persist.radio.rat_on=combine \
+    persist.radio.data_ltd_sys_ind=1 \
+    persist.data.iwlan=1
