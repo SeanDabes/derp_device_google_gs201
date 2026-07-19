@@ -55,9 +55,25 @@ BOARD_KERNEL_CMDLINE += \
     android_arch_task_struct_size=512
 
 TARGET_NO_BOOTLOADER := true
-BOARD_PREBUILT_BOOTIMAGE := $(wildcard $(TARGET_KERNEL_DIR)/boot.img)
-TARGET_NO_KERNEL := true
+# BOARD_PREBUILT_BOOTIMAGE := $(wildcard $(TARGET_KERNEL_DIR)/boot.img)
+
+# -----------------------------------------------------------------
+# WildKernel precompiled kernel (GKI) for all gs201 devices
+# -----------------------------------------------------------------
+WILDKERNEL_IMAGE := device/google/gs201/wildkernel/Image.lz4
+
+ifeq ($(wildcard $(WILDKERNEL_IMAGE)),)
+    $(error "ERROR: WildKernel image not found at $(WILDKERNEL_IMAGE).\nPlease place the Image.lz4 file there (e.g., from the AnyKernel3 zip).")
+else
+    # Override kernel settings to use the prebuilt
+    TARGET_NO_KERNEL := false
+    TARGET_PREBUILT_KERNEL := $(WILDKERNEL_IMAGE)
+    BOARD_PREBUILT_BOOTIMAGE :=
+    BOARD_PREBUILT_VENDOR_BOOTIMAGE := $(wildcard out_vendor_boot/$(TARGET_DEVICE)/vendor_boot.img)
+endif
+
 BOARD_USES_GENERIC_KERNEL_IMAGE := true
+BOARD_KERNEL_IMAGE_NAME := Image.lz4
 BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
 BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT := true
 TARGET_RECOVERY_WIPE := device/google/gs201/conf/recovery.wipe
