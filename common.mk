@@ -457,4 +457,5 @@ PRODUCT_PACKAGES += \
     Etar \
     ExactCalculator \
     Seedvault \
-    BackupRestoreConfirmation
+    BackupRestoreConfirmation \
+    Jelly
