@@ -442,3 +442,5 @@ DEVICE_PRODUCT_COMPATIBILITY_MATRIX_FILE += \
 
 # ZRAM writeback
 include hardware/google/pixel/mm/device_gki.mk
+
+PRODUCT_BUILD_IGNORE_APEX_CONTRIBUTION_CONTENTS := true
