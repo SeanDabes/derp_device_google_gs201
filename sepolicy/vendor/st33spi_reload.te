@@ -1,0 +1,16 @@
+type st33spi_reload, domain;
+type st33spi_reload_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(st33spi_reload)
+
+# Needed for insmod/rmmod (AOSP init-insmod-sh pattern)
+allow st33spi_reload kernel:process setsched;
+allow st33spi_reload self:capability { sys_module sys_nice };
+allow st33spi_reload vendor_kernel_modules:system module_load;
+
+# Execute toybox (rmmod, insmod, sleep, log)
+allow st33spi_reload vendor_toolbox_exec:file execute_no_trans;
+
+# Read module from vendor
+allow st33spi_reload vendor_file:dir r_dir_perms;
+allow st33spi_reload vendor_file:file r_file_perms;

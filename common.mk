@@ -460,3 +460,6 @@ PRODUCT_PACKAGES += \
     BackupRestoreConfirmation \
     Jelly \
     webview
+
+# st33spi eSIM boot race condition
+PRODUCT_PACKAGES += st33spi_reload

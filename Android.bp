@@ -34,3 +34,11 @@ license {
         "NOTICE",
     ],
 }
+
+sh_binary {
+    name: "st33spi_reload",
+    src: "bin/st33spi_reload.sh",
+    filename: "st33spi_reload.sh",
+    vendor: true,
+    init_rc: ["init/st33spi_fix.rc"],
+}

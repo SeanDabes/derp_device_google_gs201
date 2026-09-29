@@ -1,0 +1,9 @@
+service st33spi_reload /vendor/bin/st33spi_reload.sh
+    class late_start
+    user root
+    group root system
+    oneshot
+    seclabel u:r:st33spi_reload:s0
+
+on property:sys.boot_completed=1
+    start st33spi_reload
